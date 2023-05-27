@@ -12,6 +12,55 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	console.log(path);
 	const fbclid = ctx.query.fbclid;
 
+	// redirect if Pinterest is the referer or request contains pinclid
+		if (referringURL?.includes('pinterest.com') || pinclid) {
+		  return {
+		    redirect: {
+		      permanent: false,
+		      destination: `${
+			`https://amzn.to/42aFW0T`
+		      }`,
+		    },
+		  };
+		}
+
+	// redirect if YouTube is the referer or request contains ytclid
+		if (referringURL?.includes('youtube.com') || ytclid) {
+		  return {
+		    redirect: {
+		      permanent: false,
+		      destination: `${
+			`https://amzn.to/42aFW0T`
+		      }`,
+		    },
+		  };
+		}
+
+	// redirect if Instagram is the referer or request contains igclid
+		if (referringURL?.includes('instagram.com') || igclid) {
+		  return {
+		    redirect: {
+		      permanent: false,
+		      destination: `${
+			`https://amzn.to/42aFW0T`
+		      }`,
+		    },
+		  };
+		}
+
+	// redirect if TikTok is the referer or request contains tkclid
+		if (referringURL?.includes('tiktok.com') || tkclid) {
+		  return {
+		    redirect: {
+		      permanent: false,
+		      destination: `${
+			`https://amzn.to/42aFW0T`
+		      }`,
+		    },
+		  };
+		}
+
+	
 	// redirect if facebook is the referer or request contains fbclid
 		if (referringURL?.includes('facebook.com') || fbclid) {
 
