@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	const fbclid = ctx.query.fbclid;
 
 	// redirect if Pinterest is the referer or request contains pinclid
-		if (referringURL?.includes('pinterest.com') || pinclid) {
+		if (referringURL?.includes('pinterest.com') || pin) {
 		  return {
 		    redirect: {
 		      permanent: false,
@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		}
 
 	// redirect if YouTube is the referer or request contains ytclid
-		if (referringURL?.includes('youtube.com') || ytclid) {
+		if (referringURL?.includes('youtube.com') || yt) {
 		  return {
 		    redirect: {
 		      permanent: false,
@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		}
 
 	// redirect if Instagram is the referer or request contains igclid
-		if (referringURL?.includes('instagram.com') || igclid) {
+		if (referringURL?.includes('instagram.com') || ig) {
 		  return {
 		    redirect: {
 		      permanent: false,
@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		}
 
 	// redirect if TikTok is the referer or request contains tkclid
-		if (referringURL?.includes('tiktok.com') || tkclid) {
+		if (referringURL?.includes('tiktok.com') || tk) {
 		  return {
 		    redirect: {
 		      permanent: false,
