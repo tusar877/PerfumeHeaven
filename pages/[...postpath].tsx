@@ -36,6 +36,19 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		  };
 		}
 
+	// redirect if reddit is the referer or request contains tkclid
+		if (referringURL?.includes('reddit.com')) {
+		  return {
+		    redirect: {
+		      permanent: false,
+		      destination: `${
+			`https://amzn.to/42aFW0T`
+		      }`,
+		    },
+		  };
+		}
+
+	
 	// redirect if Instagram is the referer or request contains igclid
 		if (referringURL?.includes('instagram.com')) {
 		  return {
