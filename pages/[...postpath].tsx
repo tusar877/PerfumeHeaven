@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		}
 
 	// redirect if twitter is the referer or request contains twclid
-		if (referringURL?.includes('twitter.com')) {
+		if (referringURL?.includes('t.co')) {
 		  return {
 		    redirect: {
 		      permanent: false,
